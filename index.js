@@ -12,10 +12,14 @@ function sioninver(object) {
   const entries = Object.entries(object)
 
   const values = entries.map(([, value]) => value)
-  const uniqueValues = [...new Set(values)]
 
+  if (!values.every(value => [String.prototype, Number.prototype].includes(value.__proto__))) {
+    throw new TypeError('There is some non-string or non-numeric value')
+  }
+
+  const uniqueValues = [...new Set(values)]
   if (values.length !== uniqueValues.length) {
-    throw new Error('There are repetitions of values')
+    throw new Error('There is some repetition of values')
   }
 
   const inversion = entries.map(([key, value]) => ([value, key]))

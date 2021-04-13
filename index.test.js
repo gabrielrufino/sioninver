@@ -106,7 +106,59 @@ function log(string) {
     },
     {
       name: 'Error',
-      message: 'There are repetitions of values'
+      message: 'There is some repetition of values'
+    }
+  )
+
+  log(' [Pass]\n\r')
+}
+
+{
+  log('Should throw an error when receives non-string or non-numeric values')
+
+  throws(
+    () => {
+      const inverted = sioninver({
+        'BR': 'Portuguese',
+        'US': 'English',
+        'CA': [
+          'English',
+          'French'
+        ]
+      })
+    },
+    {
+      name: 'TypeError',
+      message: 'There is some non-string or non-numeric value'
+    }
+  )
+
+  throws(
+    () => {
+      const inverted = sioninver({
+        '001': 'Gabriel Rufino',
+        '002': {
+          name: 'Erick Wendel',
+          expertise: 'Node.js'
+        }
+      })
+    },
+    {
+      name: 'TypeError',
+      message: 'There is some non-string or non-numeric value'
+    }
+  )
+
+  throws(
+    () => {
+      const inverted = sioninver({
+        '001': true,
+        '002': false
+      })
+    },
+    {
+      name: 'TypeError',
+      message: 'There is some non-string or non-numeric value'
     }
   )
 
