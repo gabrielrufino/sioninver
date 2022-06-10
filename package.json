@@ -1,6 +1,6 @@
 {
   "name": "sioninver",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Inverses objects: turns keys into values ​​and values ​​and keys",
   "main": "index.js",
   "scripts": {
