@@ -1,6 +1,6 @@
 {
   "name": "sioninver",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Inverses objects: turns keys into values ​​and values ​​and keys",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "url": "git+https://github.com/gabrielrufino/sioninver.git"
   },
   "author": "Gabriel Rufino <contato@gabrielrufino.com>",
+  "funding": "https://github.com/sponsors/gabrielrufino",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gabrielrufino/sioninver/issues"
