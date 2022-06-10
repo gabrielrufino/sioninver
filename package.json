@@ -11,6 +11,7 @@
     "url": "git+https://github.com/gabrielrufino/sioninver.git"
   },
   "author": "Gabriel Rufino <contato@gabrielrufino.com>",
+  "funding": "https://github.com/sponsors/gabrielrufino",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gabrielrufino/sioninver/issues"
