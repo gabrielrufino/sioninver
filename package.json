@@ -4,6 +4,8 @@
   "description": "Inverses objects: turns keys into values ​​and values ​​and keys",
   "main": "index.js",
   "scripts": {
+    "lint": "npx standard .",
+    "lint:fix": "npm run lint -- --fix",
     "test": "node index.test.js"
   },
   "repository": {
