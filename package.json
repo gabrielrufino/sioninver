@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/gabrielrufino/sioninver/issues"
   },
-  "homepage": "https://github.com/gabrielrufino/sioninver#readme"
+  "homepage": "https://github.com/gabrielrufino/sioninver#readme",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
 }
