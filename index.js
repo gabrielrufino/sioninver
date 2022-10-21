@@ -1,6 +1,6 @@
 'use strict'
 
-function sioninver(object) {
+function sioninver (object) {
   if ([undefined, null].includes(object)) {
     throw new Error('Parameter is empty')
   }

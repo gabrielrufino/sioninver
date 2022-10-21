@@ -2,7 +2,7 @@ const { deepStrictEqual, throws } = require('assert')
 
 const sioninver = require('.')
 
-function log(string) {
+function log (string) {
   process.stdout.write(string)
 }
 
@@ -10,13 +10,13 @@ function log(string) {
   log('Should invert an object correctly')
 
   const object = {
-    '201': 'Created',
-    '404': 'Not Found',
-    '500': 'Server Error'
+    201: 'Created',
+    404: 'Not Found',
+    500: 'Server Error'
   }
 
   const expected = {
-    'Created': '201',
+    Created: '201',
     'Not Found': '404',
     'Server Error': '500'
   }
@@ -119,9 +119,9 @@ function log(string) {
   throws(
     () => {
       const inverted = sioninver({
-        'BR': 'Portuguese',
-        'US': 'English',
-        'CA': [
+        BR: 'Portuguese',
+        US: 'English',
+        CA: [
           'English',
           'French'
         ]
