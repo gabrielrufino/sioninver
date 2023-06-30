@@ -1,29 +1,29 @@
-'use strict'
-
-function sioninver (object) {
+function sioninver(object) {
   if ([undefined, null].includes(object)) {
-    throw new Error('Parameter is empty')
+    throw new Error('Parameter is empty');
   }
 
-  if (object.__proto__ !== Object.prototype) {
-    throw new TypeError('Parameter is not an object')
+  if (Object.getPrototypeOf(object) !== Object.prototype) {
+    throw new TypeError('Parameter is not an object');
   }
 
-  const entries = Object.entries(object)
+  const entries = Object.entries(object);
 
-  const values = entries.map(([, value]) => value)
+  const values = entries.map(([, value]) => value);
 
-  if (!values.every(value => [String.prototype, Number.prototype].includes(value.__proto__))) {
-    throw new TypeError('There is some non-string or non-numeric value')
+  if (!values.every(
+    (value) => [String.prototype, Number.prototype].includes(Object.getPrototypeOf(value)),
+  )) {
+    throw new TypeError('There is some non-string or non-numeric value');
   }
 
-  const uniqueValues = [...new Set(values)]
+  const uniqueValues = [...new Set(values)];
   if (values.length !== uniqueValues.length) {
-    throw new Error('There is some repetition of values')
+    throw new Error('There is some repetition of values');
   }
 
-  const inversion = entries.map(([key, value]) => ([value, key]))
-  return Object.fromEntries(inversion)
+  const inversion = entries.map(([key, value]) => ([value, key]));
+  return Object.fromEntries(inversion);
 }
 
-module.exports = sioninver
+module.exports = sioninver;

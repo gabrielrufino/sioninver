@@ -4,7 +4,7 @@
   "description": "Inverses objects: turns keys into values ​​and values ​​and keys",
   "main": "index.js",
   "scripts": {
-    "lint": "npx standard .",
+    "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "test": "node index.test.js"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/gabrielrufino/sioninver#readme",
   "devDependencies": {
-    "standard": "^17.0.0"
+    "@gabrielrufino/eslint-config": "^1.5.0",
+    "eslint": "^8.43.0"
   }
 }
